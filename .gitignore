@@ -1,5 +1,5 @@
 *.class
 *.log
 .idea
-learningSpark.iml
+*.iml
 target
