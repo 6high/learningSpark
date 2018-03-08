@@ -20,7 +20,7 @@ public class Java7WordCount {
     sparkConf.setAppName("Java7WordCount").setMaster("local[*]");
     JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 
-    String input = "file:///Users/gao/Downloads/helloSpark";
+    String input = args[0];
     JavaRDD<String> lines = jsc.textFile(input,3);
 
     //切分压平

@@ -12,7 +12,7 @@ object WoedCount_DataSet {
       .getOrCreate()
     import spark.implicits._
 
-    val data: Dataset[String] = spark.read.textFile("file:///Users/gao/Apache/spark-2.2.1/README.md")
+    val data: Dataset[String] = spark.read.textFile(args(0))
     val result = data.flatMap(_.split(" "))
       .filter(_ != "")
       .map((_, 1))

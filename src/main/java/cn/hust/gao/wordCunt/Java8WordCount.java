@@ -16,7 +16,7 @@ public class Java8WordCount {
     JavaSparkContext jsc = new JavaSparkContext(sparkConf);
 
     //读取数据
-    String input = "file:///Users/gao/Downloads/helloSpark";
+    String input = args[0];
     JavaRDD<String> lines = jsc.textFile(input);
 
     //切分压平

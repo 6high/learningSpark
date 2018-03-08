@@ -10,7 +10,7 @@ object WordCount_RDD {
     //val input = "/data/train.csv"
 
     //读取本地文件
-    val input = "file:///Users/gao/Downloads/helloSpark"
+    val input = args(0)
 
     val sparkConf = new SparkConf()
       .setAppName("WordCount")
